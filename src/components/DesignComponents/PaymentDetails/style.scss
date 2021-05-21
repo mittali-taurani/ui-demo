@@ -1,0 +1,14 @@
+.product-details__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    * {
+      margin-bottom: 1em;
+    }
+  
+    @media (max-width: 768px) {
+      text-align: left;
+    }
+  }
+  

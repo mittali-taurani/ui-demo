@@ -1,0 +1,98 @@
+.payment-form__main {
+  flex-grow: 1;
+
+  .payment-form__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .error__p {
+      color: red;
+      text-align: left;
+    }
+  }
+
+  .payment-form__element {
+    display: flex;
+    margin-bottom: 0.5em;
+    width: 100%;
+
+    label {
+      margin-right: 1em;
+      align-self: center;
+      min-width: 30%;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        margin: 0 0 0.5em 0;
+        align-self: flex-start;
+      }
+    }
+
+    input {
+      font-size: 1.2rem;
+      padding: 0.5em;
+      flex-grow: 1;
+      border: 1px solid;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    input[name="expiry"] {
+      max-width: 30%;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .card-type__select {
+      flex-grow: 1;
+      border: 1px solid;
+      font-size: 1.2rem;
+      padding: 0.5em;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url("../../../assets/ionic-md-arrow-dropdown.svg") transparent
+        no-repeat calc(100% - 10px) / 2em;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .submit {
+    width: 50%;
+
+    .blackBg-whiteFg-btn {
+      background-color: black;
+      color: white;
+      box-shadow: 10px 9px 5px -6px #777;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 0.5em;
+      border: none;
+
+      &:disabled {
+        background-color: rgb(185, 185, 185);
+        color: black;
+        box-shadow: none;
+        border: 1px solid;
+        cursor: not-allowed;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
